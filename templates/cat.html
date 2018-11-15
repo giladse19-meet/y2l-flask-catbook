@@ -27,8 +27,14 @@
   <!--Navbar End-->
 
   <h1>{{cat.name}}</h1>
+  <br>
+  <h2>Number of votes</h2>
+  <br>
+  <h2>{{cat.vote}}</h2>
 
-  <a class="btn btn-primary">Vote</a>
+  <form action='/cats/{{cat.id}}' method='POST'>
+  <input type='submit' value="submit">Vote
+  </form>
   
   <!--BOOTSTRAP Javascript import-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
