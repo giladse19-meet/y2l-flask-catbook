@@ -24,16 +24,14 @@ def cats_route(id):
         return render_template(
             'cat.html', cat=cat)
 
-@app.route('/add-cat', methods=['GET', 'POST'])
-def add-cat():
+@app.route('/add_cat', methods=['GET', 'POST'])
+def add_cat():
     if request.method == "GET":
-        return render_template(
-            'add-cat.html')
+        return render_template('add-cat.html')
     else:
         name = request.form['catname']
-        create_cat(name=name)
-        return render_template(
-            'add-cat.html')
+        create_cat(name=name, vote=0)
+        return render_template('add-cat.html')
 
 if __name__ == '__main__':
    app.run(debug = True)

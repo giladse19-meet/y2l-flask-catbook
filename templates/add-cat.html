@@ -18,7 +18,8 @@
 <body>
     <!--Navbar-->
     <nav class="navbar navbar-dark fb-color">
-      <a class="text-logo navbar-brand">Catbook</a>
+      <a href='/' class="text-logo navbar-brand">Catbook</a>
+      <a href='/add_cat'>Add a Cat</a>
       <form class="form-inline">
         <input class="form-control mr-sm-2" type="search" placeholder="Search">
         <button class="btn btn-outline-light" type="submit">Search</button>
@@ -27,7 +28,7 @@
     <!--Navbar End-->   
     <h1>add a new cat</h1>    
     
-    <form action='/' method='POST'>
+    <form action='/add_cat' method='POST'>
         <input type='text' name='catname' placeholder="cat name">
         <input type='submit' value="submit">
     </form>
